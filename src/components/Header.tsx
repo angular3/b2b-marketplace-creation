@@ -160,17 +160,6 @@ const Header = () => {
                       <Icon name="CheckCircle" size={16} />
                       {isHovered && <span>Выполненные</span>}
                     </a>
-                    <a 
-                      href="/analytics" 
-                      className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
-                        isActive('/analytics') 
-                          ? 'bg-primary/20 text-primary' 
-                          : 'text-gray-500 hover:bg-gray-100 hover:text-primary'
-                      }`}
-                    >
-                      <Icon name="TrendingUp" size={16} />
-                      {isHovered && <span>Аналитика продаж</span>}
-                    </a>
                   </div>
                 )}
               </div>
@@ -326,6 +315,149 @@ const Header = () => {
               </div>
             </div>
 
+            {/* Дашборд */}
+            <div>
+              <a 
+                href="/dashboard" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/dashboard') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="BarChart3" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3">Дашборд</span>
+                  </>
+                ) : (
+                  <Icon name="BarChart3" size={28} className="font-bold" />
+                )}
+              </a>
+            </div>
+
+            {/* Аналитика */}
+            <div>
+              <a 
+                href="/analytics" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/analytics') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="TrendingUp" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3">Аналитика</span>
+                  </>
+                ) : (
+                  <Icon name="TrendingUp" size={28} className="font-bold" />
+                )}
+              </a>
+            </div>
+
+            {/* Отчеты */}
+            <div>
+              <a 
+                href="/reports" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/reports') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="FileText" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3">Отчеты</span>
+                  </>
+                ) : (
+                  <Icon name="FileText" size={28} className="font-bold" />
+                )}
+              </a>
+            </div>
+
+            {/* Сообщения */}
+            <div>
+              <a 
+                href="/chat" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/chat') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="MessageCircle" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3 flex-1">Сообщения</span>
+                  </>
+                ) : (
+                  <Icon name="MessageCircle" size={28} className="font-bold" />
+                )}
+                {isHovered && (
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">3</span>
+                )}
+              </a>
+            </div>
+
+            {/* Уведомления */}
+            <div>
+              <a 
+                href="/notifications" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/notifications') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="Bell" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3 flex-1">Уведомления</span>
+                  </>
+                ) : (
+                  <Icon name="Bell" size={28} className="font-bold" />
+                )}
+                {isHovered && (
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">5</span>
+                )}
+              </a>
+            </div>
+
+            {/* Профиль */}
+            <div>
+              <a 
+                href="/profile" 
+                className={`flex items-center ${isHovered ? 'p-3' : 'p-2 justify-center'} rounded-lg transition-colors ${
+                  isActive('/profile') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-800 hover:bg-primary/10 hover:text-primary'
+                }`}
+              >
+                {isHovered ? (
+                  <>
+                    <div className="w-6 flex justify-center">
+                      <Icon name="User" size={16} className="font-medium" />
+                    </div>
+                    <span className="ml-3">Профиль</span>
+                  </>
+                ) : (
+                  <Icon name="User" size={28} className="font-bold" />
+                )}
+              </a>
+            </div>
 
 
             {/* Настройки и поддержка */}
